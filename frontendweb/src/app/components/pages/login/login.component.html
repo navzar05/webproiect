@@ -1,0 +1,30 @@
+<div class="container">
+  <div>
+    <mat-card class="card">
+      <mat-card-title class="card-header mat-headline-4">Login</mat-card-title>
+
+      <mat-card-content class="card-component">
+
+        <mat-form-field>
+          <mat-label>E-mail</mat-label>
+          <input matInput [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [(ngModel)]="password">
+        </mat-form-field>
+        <div class="buttons-container">
+          <button mat-button class="button" routerLink="/forgotpass">Forgot password</button>
+          <button mat-button class="button" routerLink="/register">Create account</button>
+          <button mat-raised-button class="button" color="primary" (click)="login()">
+            Login
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+          <mat-divider></mat-divider>
+
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

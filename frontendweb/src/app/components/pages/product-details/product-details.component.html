@@ -1,0 +1,47 @@
+<div class="product-container">
+  <img alt="ecommerce" class="product-image" src="https://dummyimage.com/400x400">
+  <div class="product-details">
+    <h2 class="brand-name">Fender</h2>
+    <h1 class="product-title">{{ this.foundProduct.name }}</h1>
+    <div class="ratings">
+          <span class="actions">
+            <button mat-icon-button><mat-icon>share</mat-icon></button>
+          </span>
+    </div>
+    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lorem nec urna accumsan malesuada. Vivamus malesuada ultrices libero, vel dignissim est varius a.</p>
+    <div class="price-action">
+      <span class="product-price">{{this.foundProduct.price | currency}}</span>
+      <button mat-raised-button>BUY NOW</button>
+    </div>
+  </div>
+</div>
+<div class="comment-section">
+  <h2>Add a Comment</h2>
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Title:</mat-label>
+      <input matInput type="text" name="comment-title" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Rating:</mat-label>
+      <mat-select name="star-rating" required>
+        <mat-option value="1">1 star</mat-option>
+        <mat-option value="2">2 stars</mat-option>
+        <mat-option value="3">3 stars</mat-option>
+        <mat-option value="4">4 stars</mat-option>
+        <mat-option value="5">5 stars</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Comment:</mat-label>
+      <textarea matInput name="comment-text" rows="4" required></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" style="max-width: 200px">Submit</button>
+  </form>
+</div>
+<p></p>
+<mat-divider></mat-divider>
+<p></p>
+<app-review *ngFor="let _ of productReviews" [review]="_"></app-review>
+
+

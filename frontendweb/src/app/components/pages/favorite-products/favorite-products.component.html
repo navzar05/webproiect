@@ -1,0 +1,6 @@
+<div class="container">
+<h1  class="mat-headline-2 header">My Favorite Products</h1>
+<div class="responsive-grid">
+  <app-product *ngFor="let product of products" [id]="product.id" [name]="product.name" [price]="product.price" [pictureUrl]="product.pictureUrl" [isFavourite]="true"></app-product>
+</div>
+</div>

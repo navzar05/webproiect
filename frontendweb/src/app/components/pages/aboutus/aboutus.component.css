@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.card-container {
+  width: 80%;
+}
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+iframe {
+  width: 100%;
+  max-width: 80%;
+  height: 500px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+
+.comment-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-section mat-card {
+  width: 80%;
+}
+
+.comment-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: vertical;
+}

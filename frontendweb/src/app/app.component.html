@@ -1,0 +1,19 @@
+<mat-sidenav-container autosize style="height: 100%" >
+
+  <mat-sidenav [opened]=showSidenav disableClose>
+    <button mat-icon-button (click)="showSidenav=false">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div class="button-group">
+      <button mat-button routerLink='home'>Home</button>
+      <button mat-button routerLink='aboutus'>About Us</button>
+      <button mat-button routerLink='gallery'>Gallery</button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header [isXSmallScreen]="isXSmallScreen" (emitShowSidenav)="handleShowSidenav()" class="header"></app-header>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,42 @@
+<mat-card class="card">
+  <mat-card-title class="card-title mat-headline-6">Modify product</mat-card-title>
+
+  <mat-card-content class="grid-container">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput [(ngModel)]="price" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Manufacturer</mat-label>
+      <mat-select>
+        @for (manuf of manufacturers; track manuf) {
+          <mat-option [value]="manuf.value">{{manuf.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select>
+        @for (type of types; track type) {
+          <mat-option [value]="type.value">{{type.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <div class="file-upload">
+      <p>Add picture:</p>
+      No file uploaded yet.
+
+      <button mat-mini-fab color="primary" class="upload-btn">
+        <mat-icon>attach_file</mat-icon>
+
+      </button>
+
+    </div>
+  </mat-card-content>
+
+  <button mat-raised-button color="primary">Add product</button>
+</mat-card>

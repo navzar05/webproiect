@@ -1,0 +1,45 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-title class="card-title mat-headline-6">Register</mat-card-title>
+
+    <mat-card-content class="grid-container">
+      <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input matInput [(ngModel)]="firstName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input matInput [(ngModel)]="lastName" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="username" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [(ngModel)]="password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Repeat password</mat-label>
+        <input type="password" matInput [(ngModel)]="repeatPassword" required>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-content class="message" *ngIf="registrationFailed">
+      <div class="message">Registration failed. Please try again.</div>
+    </mat-card-content>
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-content class="button">
+      <button mat-raised-button color="primary" (click)="register()">
+        Register
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,7 @@
+<div class="gallery">
+  <div class="image-container" *ngFor="let image of images">
+    <img [src]="image.src">
+    <p class="photo-text">{{ image.text }}</p>
+  </div>
+</div>
+

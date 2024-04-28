@@ -1,0 +1,61 @@
+<div class="container">
+  <div>
+    <mat-card class="card">
+      <mat-card-title class="card-header mat-headline-4">Manage your acccount</mat-card-title>
+      <mat-card-content class="card-component">
+        <div class="mat-body-1">Your email: {{email}}</div>
+        <div class="mat-body-1">Your first name: {{first_name}}</div>
+        <div class="mat-body-1">Your first name: {{last_name}}</div>
+        <div class="mat-body-1">Your first name: {{username}}</div>
+        <div class="mat-body-1">Fill only the fields you want to change.</div>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <div class="grid-container">
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>First name</mat-label>
+            <input matInput [(ngModel)]="first_name_new">
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>Last name</mat-label>
+            <input matInput [(ngModel)]="first_name_new">
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput [(ngModel)]="username_new">
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input matInput [(ngModel)]="email_new">
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>Current password</mat-label>
+            <input type="password" matInput [(ngModel)]="current_password" required>
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+          <mat-form-field>
+            <mat-label>New password</mat-label>
+            <input type="password" matInput [(ngModel)]="new_password">
+          </mat-form-field>
+        </div>
+      </div>
+      <button mat-raised-button class="button" color="primary">
+        Modify
+        <mat-icon>change_circle</mat-icon>
+      </button>
+      <button mat-raised-button class="button" color="warn"  (click)="logout()">
+        Logout
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-card>
+  </div>
+</div>

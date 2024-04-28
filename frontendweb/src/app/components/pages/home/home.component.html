@@ -1,0 +1,20 @@
+<mat-drawer-container style="height: 100%">
+  <mat-drawer mode="side" [opened]="showDrawer">
+    <app-filters (showCategory)="onShowCategory($event)"></app-filters>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-products-header (showHomeDrawerChange)="onShowDrawerChange($event)" >
+    </app-products-header>
+
+    <div class="responsive-grid">
+      <app-product *ngFor="let product of pagedProducts" [id]="product.id" [name]="product.name" [price]="product.price" [pictureUrl]="product.pictureUrl" [isFavourite]="false"></app-product>
+    </div>
+
+    <mat-paginator [length]="products.length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[5, 10, 15, 20]"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
+  </mat-drawer-content>
+
+</mat-drawer-container>

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; /* Includes padding and borders in element's total width and height */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 95dvw;
+  min-height: 80dvh;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card-title {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.button {
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.message {
+  background-color: darkred;
+  color: white;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Adjusts grid to a single column layout on smaller screens */
+  }
+
+  .card {
+    flex-direction: column;
+    max-width: 100%; /* Allows card to expand full width */
+  }
+
+  .button, .card-title, .message {
+    flex-direction: column;
+    align-items: center; /* Centers items within the flex container */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container, .card {
+    padding: 20px; /* Increases padding for larger screens */
+  }
+}

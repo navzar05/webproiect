@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  height: 94.2dvh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/abstract-music-notes-background_1048-10853.jpg");
+  background-size: cover;
+}
+
+.card {
+  padding: 50px;
+}
+
+.card-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  width: 100px;
+}

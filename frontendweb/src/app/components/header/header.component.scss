@@ -1,0 +1,25 @@
+
+.toolbar {
+  display: flex;
+  width: 100%;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.search-bar-container {
+  margin-top: 21px;
+}
+

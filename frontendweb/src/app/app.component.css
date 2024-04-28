@@ -1,0 +1,8 @@
+.button-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.button-group button[mat-button]{
+  min-width: 200px;
+}

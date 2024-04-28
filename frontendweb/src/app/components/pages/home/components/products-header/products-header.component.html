@@ -1,0 +1,31 @@
+<mat-toolbar>
+  <mat-toolbar-row class="container">
+    <div class="left-part">
+
+      <button mat-icon-button (click)="onShowHomeDrawerUpdated()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <button mat-button [matMenuTriggerFor]="sortByMenu">
+        Sort
+        <mat-icon>expand_more</mat-icon>
+      </button>
+      <mat-menu #sortByMenu="matMenu">
+        <button  mat-menu-item>Descending by price</button>
+        <button  mat-menu-item>Ascending by price</button>
+        <button  mat-menu-item>(A-Z)</button>
+      </mat-menu>
+    </div>
+<!--    <div class="right-part">-->
+<!--      <button mat-button [matMenuTriggerFor]="menu">-->
+<!--        Show {{ itemsShowCount }}-->
+<!--        <mat-icon>expand_more</mat-icon>-->
+<!--      </button>-->
+<!--      <mat-menu #menu="matMenu">-->
+<!--        <button (click)="onItemsUpdated(10)" mat-menu-item>10</button>-->
+<!--        <button (click)="onItemsUpdated(25)" mat-menu-item>25</button>-->
+<!--        <button (click)="onItemsUpdated(30)" mat-menu-item>30</button>-->
+<!--      </mat-menu>-->
+<!--    </div>-->
+  </mat-toolbar-row>
+</mat-toolbar>

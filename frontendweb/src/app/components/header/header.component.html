@@ -1,0 +1,68 @@
+<mat-toolbar color="primary" class="toolbar">
+  <mat-toolbar-row class="header-flex">
+    <div class="header-item">
+      <div>
+        <button mat-icon-button (click)="onClickShowSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <button mat-button routerLink='home'>Soul Music</button>
+    </div>
+    <div class="header-flex" *ngIf="!isXSmallScreen">
+
+        <form class="search-bar-container">
+          <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput>
+            <button mat-icon-button matSuffix color="primary">
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+        </form>
+
+      <button mat-icon-button [routerLink]="['favourites']" matTooltip="Your favourite products">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button [routerLink]="['login']" matTooltip="Manage your account">
+        <mat-icon>person</mat-icon>
+      </button>
+      <button mat-icon-button [routerLink]="['checkout']"  matTooltip="Your shopping cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <div *ngIf="authService.isAdmin()">
+      <button mat-icon-button  [routerLink]="['admin']"  matTooltip="Admin panel">
+        <mat-icon>dvr</mat-icon>
+      </button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="isXSmallScreen" class="header-flex">
+
+      <div>
+        <mat-form-field>
+          <mat-label>Search</mat-label>
+          <input matInput>
+          <button mat-icon-button matSuffix color="primary">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    <div class="header-flex">
+        <button mat-icon-button [routerLink]="['favourites']" matTooltip="Your favourite products">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button [routerLink]="['login']" matTooltip="Manage your account">
+          <mat-icon>person</mat-icon>
+        </button>
+      <button mat-icon-button [routerLink]="['checkout']" matTooltip="Your shopping cart">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+      <div *ngIf="authService.isAdmin()">
+        <button mat-icon-button  [routerLink]="['checkout']"  matTooltip="Admin panel">
+          <mat-icon>dvr</mat-icon>
+        </button>
+      </div>
+      </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+

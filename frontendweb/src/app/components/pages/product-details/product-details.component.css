@@ -1,0 +1,109 @@
+.container {
+  padding: 24px;
+  align-items: center;
+}
+
+img {
+  width: 75%;
+  max-height: 600px;
+  max-width: 600px;
+  object-fit: cover;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.product-container {
+  padding: 20px;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #424242;
+  width: 80%;
+  margin: 50px auto;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 50%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.product-details {
+  padding: 20px;
+  width: 50%;
+}
+
+.brand-name {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  margin-bottom: 15px;
+}
+
+.price-action {
+  display: flex;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.comment-section {
+  margin-top: 20px;
+}
+
+.comment-section mat-card{
+  width: 80%;
+}
+
+.comment-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .product-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .product-details {
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}

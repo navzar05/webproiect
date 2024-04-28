@@ -1,0 +1,21 @@
+<mat-card class="container">
+  <mat-card-header>
+    <mat-card-title>{{ name }}</mat-card-title>
+  </mat-card-header>
+  <div class="card-content">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{ name }}" (click)="navigateToProductDetails(id)" />
+    <div class="text-container">
+      <mat-card-content>Additional text goes here</mat-card-content>
+      <p class="price">{{ price | currency }}</p>
+    </div>
+  </div>
+  <mat-card-actions>
+
+    <button mat-icon-button (click)="toggleFavourite()">
+      <mat-icon>{{ isFavourite ? 'favorite' : 'favorite_border' }}</mat-icon>
+    </button>
+    <button mat-raised-button color="primary">
+      <mat-icon>shopping_cart</mat-icon> Buy
+    </button>
+  </mat-card-actions>
+</mat-card>
